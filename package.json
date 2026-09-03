@@ -1,0 +1,21 @@
+{
+"name":"socially-approved-carousel-root",
+"version":"1.0.0",
+"private": true,
+"description":"Full-stack Socially Approved Video Carousel application",
+"scripts": {
+"install:all":"npm install && npm install --prefix backend && npm install --prefix frontend",
+"dev":"concurrently -k -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+"dev:frontend":"npm run dev --prefix frontend",
+"dev:backend":"npm run dev --prefix backend",
+"build":"npm run build --prefix backend && npm run build --prefix frontend",
+"lint":"npm run lint --prefix backend && npm run lint --prefix frontend",
+"typecheck":"npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+"clean":"node -e \"const fs = require('fs'); fs.rmSync('frontend/.next', { recursive: true, force: true }); fs.rmSync('backend/dist', { recursive: true, force: true });\"",
+"test":"npm run test --prefix backend && npm run test --prefix frontend",
+"test:e2e":"npm run test:e2e --prefix frontend"
+  },
+"devDependencies": {
+"concurrently":"^9.1.2"
+  }
+}

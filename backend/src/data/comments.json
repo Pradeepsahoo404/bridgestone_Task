@@ -1,0 +1,135 @@
+[
+  {
+    "id": "comment-001",
+    "videoId": "video-001",
+    "author": "Jordan M.",
+    "message": "Does this bottle fit in standard gym bag side pockets?",
+    "createdAt": "2026-08-16T11:00:00.000Z"
+  },
+  {
+    "id": "comment-002",
+    "videoId": "video-001",
+    "author": "Alex Vance",
+    "message": "It fits great in main compartments! The handle is super sturdy.",
+    "createdAt": "2026-08-16T11:15:00.000Z"
+  },
+  {
+    "id": "comment-003",
+    "videoId": "video-002",
+    "author": "Marcus L.",
+    "message": "Where did you get the wrist straps shown in the clip?",
+    "createdAt": "2026-08-17T08:20:00.000Z"
+  },
+  {
+    "id": "comment-1788414682042-roar",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T05:51:22.042Z"
+  },
+  {
+    "id": "comment-1788415227473-1wp4",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:00:27.473Z"
+  },
+  {
+    "id": "comment-1788415256204-mcrx",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:00:56.204Z"
+  },
+  {
+    "id": "comment-1788415765813-bu5v",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:09:25.813Z"
+  },
+  {
+    "id": "comment-1788416490345-5dxx",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:21:30.345Z"
+  },
+  {
+    "id": "comment-1788416913501-46nb",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:28:33.501Z"
+  },
+  {
+    "id": "comment-1788417322771-x7ee",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:35:22.771Z"
+  },
+  {
+    "id": "comment-1788417720184-a4md",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:42:00.184Z"
+  },
+  {
+    "id": "comment-1788418046018-5txd",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:47:26.018Z"
+  },
+  {
+    "id": "comment-1788418351549-xlh6",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:52:31.549Z"
+  },
+  {
+    "id": "comment-1788418458430-rkaz",
+    "videoId": "video-029",
+    "author": "dcc",
+    "message": "dfdf",
+    "createdAt": "2026-09-03T06:54:18.430Z"
+  },
+  {
+    "id": "comment-1788418690994-mcg4",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T06:58:10.994Z"
+  },
+  {
+    "id": "comment-1788418842436-k8ct",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T07:00:42.436Z"
+  },
+  {
+    "id": "comment-1788418952091-e4pk",
+    "videoId": "video-001",
+    "author": "Tester",
+    "message": "Awesome product demonstration!",
+    "createdAt": "2026-09-03T07:02:32.091Z"
+  },
+  {
+    "id": "comment-1788424816288-gi1g",
+    "videoId": "video-029",
+    "author": "hello",
+    "message": "hello hi",
+    "createdAt": "2026-09-03T08:40:16.288Z"
+  },
+  {
+    "id": "comment-1788425234249-fgiv",
+    "videoId": "video-021",
+    "author": "hello",
+    "message": "Great product quality! Really impressed.",
+    "createdAt": "2026-09-03T08:47:14.250Z"
+  }
+]

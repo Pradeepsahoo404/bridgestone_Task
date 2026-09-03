@@ -1,0 +1,249 @@
+@import'swiper/css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Light Mode */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reels-viewport {
+  --reels-card-h: min(640px, 82vh);
+  --reels-card-w: calc(var(--reels-card-h) * 9 / 16);
+  --reels-step: calc(var(--reels-card-w) * 0.44);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.reels-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: var(--reels-card-h);
+  will-change: transform;
+  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.reels-card {
+  position: relative;
+  width: var(--reels-card-w);
+  height: var(--reels-card-h);
+  flex-shrink: 0;
+  margin-right: calc(var(--reels-step) - var(--reels-card-w));
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.72);
+  transform-origin: center center;
+  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1),
+              opacity 0.4s ease,
+              visibility 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.reels-card.is-active,
+.reels-card.is-side {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.reels-card.is-active {
+  transform: scale(1);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.65);
+}
+
+.reels-card.is-side {
+  transform: scale(0.72);
+  cursor: pointer;
+}
+
+.reels-card.is-side::after {
+  content:'';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 6;
+}
+
+@media (max-width: 640px) {
+  .reels-viewport {
+    --reels-card-h: min(560px, 76vh);
+    --reels-step: calc(var(--reels-card-w) * 0.32);
+  }
+}
+
+.comment-panel {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (min-width: 640px) {
+  .comment-panel {
+    animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+.reels-nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  color: #111111 !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: auto !important;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.reels-nav-btn-prev {
+  left: max(24px, calc(50% - (var(--reels-card-w) * 0.5 + var(--reels-step) * 1.6))) !important;
+}
+
+.reels-nav-btn-next {
+  left: min(calc(100% - 24px), calc(50% + (var(--reels-card-w) * 0.5 + var(--reels-step) * 1.6))) !important;
+}
+
+.reels-nav-btn:hover,
+.reels-nav-btn:active,
+.reels-nav-btn:focus {
+  transform: translate(-50%, -50%) scale(1.1) !important;
+  background: #ffffff !important;
+}
+
+.reels-nav-btn:disabled {
+  opacity: 1 !important;
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+.reels-nav-btn::after,
+.reels-nav-btn::before {
+  content: none !important;
+  display: none !important;
+}
+
+@keyframes reelsTapFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+.reels-tap-icon {
+  animation: reelsTapFade 0.55s ease forwards;
+}
